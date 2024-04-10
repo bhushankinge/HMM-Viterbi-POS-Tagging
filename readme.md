@@ -25,13 +25,13 @@ This repository contains Python code for training and using a Hidden Markov Mode
    pip install pandas numpy
    ```
 3. **Prepare Your Data**: Organize your data in the required format. The expected format is a tab-separated file where each line contains a sequence index, the token, and its corresponding tag. Sequences should be separated by a newline.
-```
-1    The    DET
-2    quick  ADJ
-3    brown  ADJ
-4    fox    NOUN
-...
-```
+   ```
+   1    The    DET
+   2    quick  ADJ
+   3    brown  ADJ
+   4    fox    NOUN
+   ...
+   ```
 4. **Train the Model**:  Run the code to train the HMM on your training data. This process involves data loading, vocabulary building, and calculating the transition and emission probabilities.
 5. **Decode Sequences**: Use the trained model to decode sequences in your test data. The greedy & viterbi decoder will output the predicted sequence of tags based on the model.
 6. **Evaluate Performance**: Calculate the accuracy of the model on your development or test set to understand its performance.
