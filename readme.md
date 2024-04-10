@@ -52,15 +52,15 @@ hmm.save_model("data/hmm.json")
 
 2. **Decoding and Evaluation**: Load your test data, decode the sequences using the Greedy Decoder, and evaluate the model's accuracy.
 
-a. **Greedy**:
-```python
-test_data = load_text_data('data/test', get_vocabulary=False, separate_sentences=True, replace_unknown=True, vocab=hmm.lexicon)
-test_data_orig = load_text_data('data/test', get_vocabulary=False, separate_sentences=True,  vocab=hmm.lexicon)
-greedy_test = GreedyDecoder(test_data, hmm.labels, transition_prob, emission_prob, test_data_orig)
-preds = greedy_test.decode()
-acc = greedy_test.calculate_accuracy(greedy_test.get_targets())
-print(f"Greedy Decoding Accuracy on test_data: {acc*100}")
-```
+   a. **Greedy**:
+   ```python
+   test_data = load_text_data('data/test', get_vocabulary=False, separate_sentences=True, replace_unknown=True, vocab=hmm.lexicon)
+   test_data_orig = load_text_data('data/test', get_vocabulary=False, separate_sentences=True,  vocab=hmm.lexicon)
+   greedy_test = GreedyDecoder(test_data, hmm.labels, transition_prob, emission_prob, test_data_orig)
+   preds = greedy_test.decode()
+   acc = greedy_test.calculate_accuracy(greedy_test.get_targets())
+   print(f"Greedy Decoding Accuracy on test_data: {acc*100}")
+   ```
 
    b. **Viterbi**:
    ```python
