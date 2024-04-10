@@ -52,7 +52,7 @@ hmm.save_model("data/hmm.json")
 
 2. **Decoding and Evaluation**: Load your test data, decode the sequences using the Greedy Decoder, and evaluate the model's accuracy.
 
-   a. **Greedy**:
+a. **Greedy**:
 ```python
 test_data = load_text_data('data/test', get_vocabulary=False, separate_sentences=True, replace_unknown=True, vocab=hmm.lexicon)
 test_data_orig = load_text_data('data/test', get_vocabulary=False, separate_sentences=True,  vocab=hmm.lexicon)
